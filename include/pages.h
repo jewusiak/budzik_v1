@@ -7,7 +7,9 @@
 void LcdInit();
 
 
-void showSplash(int delayTime);
+void ShowSplash(int delayTime);
+
+void ShowMain();
 
 void MainPageHandler();
 

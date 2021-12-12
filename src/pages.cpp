@@ -9,7 +9,7 @@ void LcdInit(){
     lcd.backlight();
 }
 
-void showSplash(int delayTime){
+void ShowMain(){
     lcd.setCursor(0,0); // Ustawienie kursora w pozycji 0,0 (pierwszy wiersz, pierwsza kolumna)
     lcd.print(GetFormattedTime());
     lcd.setCursor(0,1); //Ustawienie kursora w pozycji 0,0 (drugi wiersz, pierwsza kolumna)
@@ -17,6 +17,13 @@ void showSplash(int delayTime){
     lcd.setCursor(11-String(sys.active_alarms).length(), 1);
 
     lcd.print(sys.active_alarms);
+}
+
+void ShowSplash(int delayTime){
+    lcd.setCursor(0,0); // Ustawienie kursora w pozycji 0,0 (pierwszy wiersz, pierwsza kolumna)
+    lcd.print("Alarm");
+    lcd.setCursor(0,1); //Ustawienie kursora w pozycji 0,0 (drugi wiersz, pierwsza kolumna)
+    lcd.print("Grzegorz Jewusiak");
     delay(delayTime);
 }
 
